@@ -30,23 +30,28 @@ export default class App extends React.Component {
         };
         return (
             <View style={styles.container}>
-                <Text>Welcome to Basic Split a Bill!</Text>
-                <Text>How much is the bill?</Text>
+                <Text style={styles.textSize}>How much is the bill?</Text>
                 <TextInput keyboardType="numeric"
                            onChangeText={(bill) => this.setState({bill})}
+                           style={styles.textInput}
+                           underlineColorAndroid={'transparent'}
                 />
-                <Text>How many people are with you?</Text>
+                <Text style={styles.textSize}>How many people are with you?</Text>
                 <TextInput keyboardType="numeric"
                            onChangeText={(people) => this.setState({people})}
+                           style={styles.textInput}
+                           underlineColorAndroid={'transparent'}
                 />
-                <Text>What percent are you tipping?</Text>
+                <Text style={styles.textSize}>What percent are you tipping?</Text>
                 <TextInput keyboardType="numeric"
                            onChangeText={(tip) => this.setState({tip})}
-
+                           style={styles.textInput}
+                           underlineColorAndroid={'transparent'}
                 />
                 <Button
                     onPress={SubmitHandler}
                     title="Calculate!"
+                    color='#AEAEAE'
                 />
             </View>
         );
@@ -56,8 +61,17 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#FAFAFA',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
     },
+    textSize: {
+        fontSize:25,
+    },
+    textInput: {
+        fontSize:25,
+        height: 45,
+        width: 100,
+        backgroundColor: '#AEAEAE',
+    }
 });
