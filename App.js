@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {StyleSheet, Text, View, TextInput, Button} from 'react-native';
 
 export default class App extends React.Component {
     state = {
@@ -33,18 +33,20 @@ export default class App extends React.Component {
                 <Text>Welcome to Basic Split a Bill!</Text>
                 <Text>How much is the bill?</Text>
                 <TextInput keyboardType="numeric"
-                           defaultValue="20.00"
                            onChangeText={(bill) => this.setState({bill})}
                 />
                 <Text>How many people are with you?</Text>
                 <TextInput keyboardType="numeric"
-                           defaultValue="2"
                            onChangeText={(people) => this.setState({people})}
                 />
                 <Text>What percent are you tipping?</Text>
                 <TextInput keyboardType="numeric"
-                           defaultValue="20"
-                           onChangeText={(tip) => this.setState({tip})} onSubmitEditing={SubmitHandler}
+                           onChangeText={(tip) => this.setState({tip})}
+
+                />
+                <Button
+                    onPress={SubmitHandler}
+                    title="Calculate!"
                 />
             </View>
         );
