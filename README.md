@@ -2,6 +2,8 @@
 
 This is my basic split a bill but built with React Native for mobile. You can find the other one [here.](https://github.com/zacharyrhaynie/Basic-Split-a-Bill) The code is a bit different as Native adds more and requires different syntax than React. It was a fun exercise in learning about Native, even making such a basic app.
 
+Here is the [Snack](https://snack.expo.io/@zacharyrhaynie/share-a-bill)
+
 ### Prerequisites
 
 Pretty much only need Node. It runs on React, React-Native, and of course Node. It has most everything installed or in the .json
